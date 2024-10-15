@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Petshop Archive</title>
+    <link rel="stylesheet" href="card.css" />
+    <!-- Tempat untuk file CSS -->
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header>
+      <div class="logo">
+        <h1>Petshop Archive</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#">Favorite</a></li>
+          <li><a href="#footer">About Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+      <!-- Petshop Info -->
+      <div class="petshop-info">
+        <div>
+          <h1>Alam Raya Petshop</h1>
+          <div class="petshop-image">
+            <img src="hero-image_2 1.png" alt="Petshop Image" />
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
+            commodo ligula eget dolor. Aenean massa. ...
+          </p>
+          <p>Surabaya | Jln. Pandeglang no. 19</p>
+          <div class="tags">
+            <span>Surabaya</span>
+            <span>Classic</span>
+            <span>🌟 4.8/5.0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Petfood List -->
+      <div class="petfood-list">
+        <h2>Petfood List:</h2>
+        <h3>Food</h3>
+        <ul>
+          <li>MyPet</li>
+          <li>Excel</li>
+        </ul>
+        <div class="divider"></div>
+        <h3>Snacks</h3>
+        <ul>
+          <li>Life Pouch</li>
+          <li>Whiskas</li>
+        </ul>
+      </div>
+
+      <!-- Customer Reviews -->
+      <div class="reviews" id="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="add-review">
+          <button>Add Review +</button>
+        </div>
+        <div class="review-grid">
+          <div class="review-card">
+            <h3>Mulyono Andriansyah</h3>
+            <p>Petshop yang cukup lengkap!</p>
+            <span>13 November 2019</span>
+          </div>
+          <div class="review-card">
+            <h3>Rina Citra Lestari</h3>
+            <p>Tempat yang bagus untuk mencari keperluan anabul.</p>
+            <span>13 November 2019</span>
+          </div>
+          <div class="review-card">
+            <h3>Iswa Nugraha</h3>
+            <p>Bagus</p>
+            <span>13 November 2019</span>
+          </div>
+          <div class="review-card">
+            <h3>Ramzan Hadi</h3>
+            <p>Tempat nya tidak buruk namun pelayanan kurang memuaskan</p>
+            <span>12 November 2019</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h3>Petshop Archive.</h3>
+          <p>Find - Look - Decide.</p>
+        </div>
+        <div class="footer-links center">
+          <div class="footer-column">
+            <h4>Contact</h4>
+            <ul>
+              <li>Address: Jl. Sukamaju, Surabaya, Indonesia, 12345</li>
+              <li>Phone: 08123456789</li>
+              <li>Email: petshop.archive@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-links">
+          <div class="footer-column">
+            <h4>Follow us</h4>
+            <ul>
+              <li>Instagram: @petshop.archive</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2023 - Petshop Archive. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("dropdownMenu");
+        if (menu.style.display === "block") {
+          menu.style.display = "none";
+        } else {
+          menu.style.display = "block";
+        }
+      }
+
+      function toggleMenu() {
+        var menu = document.getElementById("dropdownMenu");
+        if (menu.style.display === "block") {
+          menu.style.display = "none";
+        } else {
+          menu.style.display = "block";
+        }
+      }
+
+      // Scroll to top when "Home" is clicked
+      document
+        .querySelector('a[href="#home"]')
+        .addEventListener("click", function (e) {
+          e.preventDefault(); // Prevent the default anchor behavior
+          window.scrollTo({ top: 0, behavior: "smooth" }); // Scroll to top with smooth behavior
+        });
+
+      document
+        .querySelector("a[href='#reviews']")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          document
+            .getElementById("reviews")
+            .scrollIntoView({ behavior: "smooth" });
+
+          // Hapus hash dari URL setelah scroll
+          history.pushState(
+            "",
+            document.title,
+            window.location.pathname + window.location.search
+          );
+        });
+    </script>
+  </body>
+</html>
